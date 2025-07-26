@@ -14,7 +14,68 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      mcp_business: {
+        Row: {
+          created_at: string
+          descripcion: string | null
+          id: number
+          nombre_empresa: string | null
+        }
+        Insert: {
+          created_at?: string
+          descripcion?: string | null
+          id?: number
+          nombre_empresa?: string | null
+        }
+        Update: {
+          created_at?: string
+          descripcion?: string | null
+          id?: number
+          nombre_empresa?: string | null
+        }
+        Relationships: []
+      }
+      mcp_clients: {
+        Row: {
+          business_id: number
+          client_id: string | null
+          created_at: string
+          id: number
+          motivo_contacto: string | null
+          nivel_satisfaccion: number | null
+          nombre_cliente: string | null
+          tipo_requerimiento: string | null
+        }
+        Insert: {
+          business_id: number
+          client_id?: string | null
+          created_at?: string
+          id?: number
+          motivo_contacto?: string | null
+          nivel_satisfaccion?: number | null
+          nombre_cliente?: string | null
+          tipo_requerimiento?: string | null
+        }
+        Update: {
+          business_id?: number
+          client_id?: string | null
+          created_at?: string
+          id?: number
+          motivo_contacto?: string | null
+          nivel_satisfaccion?: number | null
+          nombre_cliente?: string | null
+          tipo_requerimiento?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "mcp_clients_business_id_fkey"
+            columns: ["business_id"]
+            isOneToOne: false
+            referencedRelation: "mcp_business"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

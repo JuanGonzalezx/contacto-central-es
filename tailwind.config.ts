@@ -18,6 +18,13 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Montserrat', 'sans-serif'],
+				'body': ['Roboto', 'sans-serif'],
+			},
+			fontSize: {
+				'base': '16px',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +68,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				
+				// Dashboard custom colors
+				'primary-orange': 'hsl(var(--primary-orange))',
+				'secondary-white': 'hsl(var(--secondary-white))',
+				'tertiary-gray': 'hsl(var(--tertiary-gray))',
+				'text-dark': 'hsl(var(--text-dark))',
+				'text-gray': 'hsl(var(--text-gray))',
+				
+				// Chart colors
+				'chart-1': 'hsl(var(--chart-1))',
+				'chart-2': 'hsl(var(--chart-2))',
+				'chart-3': 'hsl(var(--chart-3))',
+				'chart-4': 'hsl(var(--chart-4))',
+				'chart-5': 'hsl(var(--chart-5))',
+				'chart-6': 'hsl(var(--chart-6))',
+				'chart-7': 'hsl(var(--chart-7))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
